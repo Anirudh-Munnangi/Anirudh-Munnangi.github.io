@@ -4,7 +4,7 @@
 <head>
     <title>Anirudh Munnangi-Portfolio</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -15,16 +15,18 @@
         #body-grad {
             background: #34282C;
             /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(bottom, #34282C, #FFF);
+            background: -webkit-linear-gradient(bottom, #34282C, #AAA);
             /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(bottom, #34282C, #FFF);
+            background: -o-linear-gradient(bottom, #34282C, #AAA);
             /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(bottom, #34282C, #FFF);
+            background: -moz-linear-gradient(bottom, #34282C, #AAA);
             /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to top, #34282C, #FFF);
+            background: linear-gradient(to top, #34282C, #AAA);
             /* Standard syntax (must be last) */
         }
-
+        #body-grad1 {
+          background: #34282C;
+        }
         #bar-chart {
             border-style: ridge;
             border-width: 7px;
@@ -67,7 +69,7 @@
         /* Style the tab */
 
         #publication-name {
-            border-style: solid;
+            border-style: none;
             border-width: 2px;
         }
 
@@ -150,22 +152,22 @@
         </div>
         <div id="profile-pic" class="container">
             <div class="row">
-                <div id="text-left-image" class="col-lg-4">
+                <div id="text-left-image" class="col-xs-4">
                     <br/>
                     <br/>
                     <br/>
                     <br/>
-                    <h4 style="text-decoration:underline;">ANIRUDH MUNNANGI</h4>
+                    <h4 style="text-decoration:underline;text-align:center;font-weight:bold;">ANIRUDH MUNNANGI</h4>
                 </div>
-                <div class="col-lg-4">
-                    <img src="modules/profile-picture.png" style="border-radius:50%;width:250px;height:250px;" atl="Profile_Picture"></img>
+                <div class="col-xs-4">
+                    <img src="modules/profile-picture.png" style="border-radius:50%;width:200px;height:200px;" atl="Profile_Picture"></img>
                 </div>
-                <div id="text-right-image" class="col-lg-4">
+                <div id="text-right-image" class="col-xs-4">
                     <br/>
                     <br/>
                     <br/>
                     <br/>
-                    <h4 style="text-decoration:underline;">Data Analytics/Science Enthusiast</h4>
+                    <h4 style="text-decoration:underline;text-align:center;font-weight:bold;">Data Analytics/Science Enthusiast</h4>
                 </div>
             </div>
         </div>
@@ -177,20 +179,20 @@
             </div>
             <div id="Resume" class="tabcontent">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-xs-7">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-xs-3">
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
-                                <img src="modules/cchmc_logo.png" width=220px height=150px></img>
+                                <img src="modules/cchmc_logo.png" width=160px height=150px></img>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-xs-1">
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-xs-8">
                                 <h2> WORK EXPERIENCE </h2>
                                 <br/>
                                 <br/>
@@ -199,9 +201,10 @@
                                 <h4><span style="font-weight:bold;">Location</span>: Cincinnati, Ohio</h4>
                                 <h4><span style="font-weight:bold;">Dates</span>: May 2017 to Dec 2017</h4>
                                 <br/>
-                                <h5>Project#1: LPDR (Longitudnal Pediatric Data Resource)-:</h5>
+                                <h5>Project#1: LPDR (Longitudinal Paediatric Data Resource)-:</h5>
                                 <ul>
-                                    <li>Development of Python libraries for cross project utilization.</li>
+                                    <li>Development of stats, visuals and UI for targeted marketing of project subscribers.</li>
+                                    <li>Development of Python libraries and modules suitable for cross project utilization.</li>
                                     <li>Python applications to handle raw data, PostgreSql database and online apis together.</li>
                                     <li>Building Pythonic data quality analysis and statistical comparison software.</li>
                                     <li>Launching Python-Django based web apps associated with visualizations and interactive UI.</li>
@@ -211,23 +214,24 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-xs-3">
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
-                                <img src="modules/lac_logo.png" width=220px height=150px></img>
+                                <img src="modules/lac_logo.png" width=160px height=150px></img>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-xs-1">
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-xs-8">
                                 <br/>
                                 <br/>
                                 <br/>
                                 <br/>
-                                <h3 style="font-weight:bold;text-decoration:underline;"> Data Analyst</h3>
+                                <br/>
+                                <h3 style="font-weight:bold;text-decoration:underline;"> Data Science Analyst</h3>
                                 <h4><span style="font-weight:bold;">Company</span>: Learning Assistance Center, University of Cincinnati</h4>
                                 <h4><span style="font-weight:bold;">Location</span>: Cincinnati, Ohio</h4>
                                 <h4><span style="font-weight:bold;">Dates</span>: Aug 2015 to Aug 2017</h4>
@@ -289,28 +293,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-1">
+                    <div class="col-xs-1">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xs-4">
                         <h2 style="text-align:center;">SKILLS</h2>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
-                        <br/>
-                        <canvas id="mySkillChart" width="200" height="150"></canvas>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <canvas id="myDoughnutChart" width="200" height="150"></canvas>
+                        <canvas id="mySkillChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
-                        <canvas id="myHardSkillChart" width="200" height="150"></canvas>
+                        <canvas id="myDoughnutChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <canvas id="myHardSkillChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
+                        <br/>
                         <br/>
                         <br/>
                         <br/>
@@ -320,45 +324,35 @@
                         </div>
                         <h2 style="text-align:center;">EDUCATION</h2>
                         <br/>
-                        <br/>
-                        <br/>
-                        <div class="row" style="border-style:ridge;border-width:5px;margin:5px;border-color:black;">
-                            <div class="col-lg-4">
-                                <br/>
-                                <br/>
-                                <br/>
-                                <img src="modules/uc_logo.jpeg" alt="University of Cincinnati Logo" width=100px height=150px></img>
+                        <div class="row" style="border-style:ridge;border-width:3px;margin:5px;border-color:black;">
+                            <div style="width:100%;height:100%">
+                              <img src="modules/uc_logo.jpeg" style="display:block;margin-left:auto;margin-right:auto;" alt="University of Cincinnati Logo" width=100px height=100px></img>
                             </div>
-                            <div class="col-lg-8">
-                                <h4>University of Cincinnati</h4>
+                            <div class="col-xs-12">
+                                <h4 style="text-align:justify;">University of Cincinnati</h4>
                                 <h4>Cincinnati, Ohio</h4>
                                 <br/>
                                 <h5>Masters In EE</h5>
                                 <h5>CEAS-Department of EECS</h5>
                                 <h5>GPA 3.83/4</h5>
-                                <h5>2013-2017</h5>
                                 <br/>
                                 <h4>GRADUATED</h4 >
                           </div>
                         </div>
                         <br/>
                         <br/>
-                        <br/>
-                        <div class="row" style="border-style:ridge;border-width:5px;margin:5px;border-color:black;">
-                          <div class="col-lg-4">
-                            <br/>
-                            <br/>
-                            <img src="modules/iiitbh_logo.png" alt="IIIT-Bhubaneswar Logo" width=100px height=150px></img>
+                        <div class="row" style="border-style:ridge;border-width:3px;margin:5px;border-color:black;">
+                          <div style="width:100%;height:100%">
+                            <img src="modules/iiitbh_logo.png" style="display:block;margin-left:auto;margin-right:auto;" alt="IIIT-Bhubaneswar Logo" width=100px height=100px></img>
                           </div>
-                          <div class="col-lg-8">
-                            <h4>IIIT-Bhubaneswar</h4>
+                          <div class="col-xs-12">
+                            <h4 style="text-align:justify;">IIIT-Bhubaneswar</h4>
                                 <h4>Bhubaneswar, Odisha</h4>
-                                <h4>India
+                                <h4>India</h4>
                             <br/>
                             <br/>
                             <h5>Masters In ETC</h5>
                             <h5>GPA 8.71/10</h5>
-                            <h5>2009-2013</h5>
                             <br/>
                             <h4>GRADUATED</h4 >
                           </div>
@@ -367,7 +361,6 @@
                 </div>
             </div>
             <div id="Projects" class="tabcontent">
-              <div id="main-content" class="container">
                 <h3>Click on each project to know more about it.</h3>
                 <br/>
                 <br/>
@@ -432,9 +425,21 @@
                 </div>
                 <br/>
                 <br/>
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project6"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">6. Forex Forecasting using machine learning wavelet neural network models.</span></button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project6"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">6. An analysis of Etiquettes and Expectations of people using flight survey data.</span></button>
                 <br/>
                 <div id="Project6" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a concrete example of a full life cycle data visualization project. Data is collected, cleaned, analyzed and conclusions are made with different kind of insightful visualizations.</p>
+                  <h4>Objective</h4><p class="project-text">Given, Flying-Etiquette survey data, perform visualizations from various aspects and angles to bring out concrete insights.</p>
+                  <br/>
+                  <p class="project-text">There are various fields which provide information about the view of people using flight as the medium of transport. Although each field itself provides a good insight on its own, two or more fields can be compared amongst each other to generate more comparative insights. The same has been done in this project and many interesting visualizations have been crafted out. The whole presentation has been arranged in the form of a website and it is present inside the repository link below. Instructions to access the same are present in the Readme file.</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Flying_Etiquette_Survey_Analysis" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project7"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">7. Forex Forecasting using machine learning wavelet neural network models.</span></button>
+                <br/>
+                <div id="Project7" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
                   <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
                   <p class="project-text">This project is a full life cycle data science work. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations.</p>
                   <h4>Objective</h4>Given Forex(Foreign Exchange) i.e. currency time series data from three major developing countries, predict the flow/changes of currency exchange values.</p>
@@ -444,9 +449,9 @@
                 </div>
                 <br/>
                 <br/>
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project7"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">7. Stock Market Volatility analysis merged with swarm optimization algorithms.</span></button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project8"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">8. Stock Market Volatility analysis merged with swarm optimization algorithms.</span></button>
                 <br/>
-                <div id="Project7" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                <div id="Project8" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
                   <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
                   <p class="project-text">This project is a full life cycle data science work. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations.</p>
                   <h4>Objective</h4><p class="project-text">Given stock market data from major stock sources, predict the volatility and changes of the values. Also, optimize the algorithms with swarm inspired methods.</p>
@@ -455,9 +460,9 @@
                 </div>
                 <br/>
                 <br/>
-                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project8"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">8. Machine learning based neural network models to perform skin cancer segmentation.</span></button>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project9"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">9. Machine learning based neural network models to perform skin cancer segmentation.</span></button>
                 <br/>
-                <div id="Project8" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                <div id="Project9" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
                   <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
                   <p class="project-text">This project is a full life cycle data science work. It is the topic of my Masters Thesis Research. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations. Two innovative algorithms are research and modelled into achieving the segmentation operations.</p>
                   <h4>Objective</h4><p class="project-test">Research innovative algorithms to perform the image segmentation operation in the process of skin cancer detection.</p>
@@ -466,7 +471,6 @@
                 </div>
                 <br/>
                 <br/>
-              </div>
             </div>
             <div id="Publications" class="tabcontent">
               <div id="publication-name" class=container>
@@ -526,7 +530,7 @@
             data: {
                 labels: ["Data Collection", "Data Quality Analysis", "Data Modelling", "Development", "Visualization / Front-End"],
                 datasets: [{
-                    data: [0.3, 0.1, 0.15, 0.25, 0.20],
+                    data: [30, 10, 15, 25, 20],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -582,7 +586,7 @@
             data: {
                 labels: ["Python", "R", "SQL", "Tableau", "Web-Development","Git","C++","MS-Office"],
                 datasets: [{
-                    data: [9, 6, 7, 7, 6, 8, 5.5, 7],
+                    data: [9, 7, 7, 6, 6, 8, 5.5, 7],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.7)',
                         'rgba(54, 162, 235, 0.7)',
