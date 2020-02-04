@@ -2,9 +2,803 @@
 <html lang="en">
 
 <head>
-    <title>Maintainance</title>
+    <title>Anirudh Munnangi-Portfolio</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style>
+        #body-grad {
+            background: #34282C;
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(bottom, #34282C, #AAA);
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(bottom, #34282C, #AAA);
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(bottom, #34282C, #AAA);
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to top, #34282C, #AAA);
+            /* Standard syntax (must be last) */
+        }
+        #body-grad1 {
+          background: #34282C;
+        }
+        #bar-chart {
+            border-style: ridge;
+            border-width: 7px;
+            background-color: #FFF;
+        }
+
+        #myChart {
+            background-color: #FFF;
+        }
+
+        #profile-pic {
+            text-align: center;
+            float: center;
+            background-position: center;
+        }
+
+        #text-left-image {
+            text-align: left;
+        }
+
+        #text-right-image {
+            text-align: right;
+        }
+
+        #main-content {
+            margin: 4%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: #ccc;
+            text-align: justify;
+        }
+
+        #first_button {
+            /*margin-left: 15%;*/
+        }
+
+        #thick-line {
+            background-color: black;
+        }
+        /* Style the tab */
+
+        #publication-name {
+            border-style: none;
+            border-width: 2px;
+        }
+
+        #footer {
+            background-color: #150434;
+        }
+
+        #footer-left {
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        #footer-right {
+            margin-right: 5%;
+            text-align: right;
+        }
+
+        div.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #2C3539;
+            color: white;
+        }
+        /* Style the buttons inside the tab */
+
+        div.tab button {
+            background-color: inherit;
+            float: left;
+            text-align: center;
+            border: none;
+            outline: 1px solid #ccc;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            width: 250px;
+        }
+        /* Change background color of buttons on hover */
+
+        div.tab button:hover {
+            background-color: #3BB9FF;
+        }
+        /* Create an active/current tablink class */
+
+        div.tab button.active {
+            background-color: #151B54;
+        }
+        /* Style the tab content */
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <script>
+        function openChart(evt, chartName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(chartName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        window.onload = function() {
+            document.getElementById("first_button").click()
+        }
+    </script>
 </head>
+
 <body>
-  <h3> We are sorry. The website is under Maintainance and will reopen soon. </h3>
+    <div id="body-grad">
+        <div id="bar-chart" class="container">
+            <canvas id="myChart" width="400" height="150"></canvas>
+        </div>
+        <div id="profile-pic" class="container">
+            <div class="row">
+                <div id="text-left-image" class="col-xs-4">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h4 style="text-decoration:underline;text-align:center;font-weight:bold;">ANIRUDH MUNNANGI</h4>
+                </div>
+                <div class="col-xs-4">
+                    <img src="modules/profile-picture.png" style="border-radius:50%;width:200px;height:200px;" atl="Profile_Picture"></img>
+                </div>
+                <div id="text-right-image" class="col-xs-4">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h4 style="text-decoration:underline;text-align:center;font-weight:bold;">Data Analytics/Science Enthusiast</h4>
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div class="tab">
+                <button class="tablinks" id="first_button" onclick="openChart(event, 'Resume')">Resume / Profile</button>
+                <button class="tablinks" onclick="openChart(event, 'Projects')">Analytics Based Projects</button>
+                <button class="tablinks" onclick="openChart(event, 'Publications')">Publications</button>
+            </div>
+            <div id="Resume" class="tabcontent">
+                <div class="row">
+                    <div class="col-xs-7">
+                      <div class="row">
+                          <div class="col-xs-3">
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <br/>
+                              <img src="modules/cap1.jpg" width=160px height=150px></img>
+                          </div>
+                          <div class="col-xs-1">
+                          </div>
+                          <div class="col-xs-8">
+                              <h2> WORK EXPERIENCE </h2>
+                              <br/>
+                              <br/>
+                              <h3 style="font-weight:bold;text-decoration:underline;"> Data Analyst (Contract)</h3>
+                              <h4><span style="font-weight:bold;">Company</span>: Capital One Financial</h4>
+                              <h4><span style="font-weight:bold;">Location</span>: Richmond, Virginia</h4>
+                              <h4><span style="font-weight:bold;">Dates</span>: May 2018 to Present</h4>
+                              <br/>
+                              <h5>Project: Customer Resiliency (Credit Card Loss Mitigation)-: <strong> Highlights</strong> </h5>
+                              <ul>
+                                  <li>Automation & support of credit card sale process reports. (60X improvement)</li>
+                                  <li>Development of Python pipelines for ML operations oriented towards clients decision in collections & sales. (ML impact)</li>
+                                  <li>Innovation in the data quality checks process by designing the Data-Quality check rules engine. (Make business smoother)</li>
+                                  <li>Deploy multiple reports, bulk requests & ETL pipelines. (7X faster results)</li>
+                                  <li>Launch Python wrappers for code triggers, github scripts, dashboard refresh tools & reports. (100% automation in some areas)</li>
+                                  <br/>
+                                  <span style="font-weight:bold;">Skills/Technologies Utilized</span>: Python, SQL, MS-Excel, Statistics/Machine Learning, REST Web Services, Databricks, Snowflake, AWS(S3/EMR/EC2), Pyspark</li>
+                          </div>
+                      </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <img src="modules/cchmc_logo.png" width=160px height=150px></img>
+                            </div>
+                            <div class="col-xs-1">
+                            </div>
+                            <div class="col-xs-8">
+                                <br/>
+                                <br/>
+                                <h3 style="font-weight:bold;text-decoration:underline;"> Data Science Intern</h3>
+                                <h4><span style="font-weight:bold;">Company</span>: Cincinnati Childrens Medical Hospital Center</h4>
+                                <h4><span style="font-weight:bold;">Location</span>: Cincinnati, Ohio</h4>
+                                <h4><span style="font-weight:bold;">Dates</span>: May 2017 to Dec 2017</h4>
+                                <br/>
+                                <h5>Project#1: LPDR (Longitudinal Paediatric Data Resource)-:</h5>
+                                <ul>
+                                    <li>Development of stats, visuals and UI for targeted marketing of project subscribers.</li>
+                                    <li>Development of Python libraries and modules suitable for cross project utilization.</li>
+                                    <li>Python applications to handle raw data, PostgreSql database and online apis together.</li>
+                                    <li>Building Pythonic data quality analysis and statistical comparison software.</li>
+                                    <li>Launching Python-Django based web apps associated with visualizations and interactive UI.</li>
+                                    <li>Analysis of insights such as disease recurrence and patient readmissions.</li>
+                                    <br/>
+                                    <span style="font-weight:bold;">Skills/Technologies Utilized</span>: Python, SQL, Web-Development-HTML / CSS / Javascript, MS-Excel, Statistics/Machine Learning, REST Web Services</li>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <img src="modules/lac_logo.png" width=160px height=150px></img>
+                            </div>
+                            <div class="col-xs-1">
+                            </div>
+                            <div class="col-xs-8">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <h3 style="font-weight:bold;text-decoration:underline;"> Data Science Analyst</h3>
+                                <h4><span style="font-weight:bold;">Company</span>: Learning Assistance Center, University of Cincinnati</h4>
+                                <h4><span style="font-weight:bold;">Location</span>: Cincinnati, Ohio</h4>
+                                <h4><span style="font-weight:bold;">Dates</span>: Aug 2015 to Aug 2017</h4>
+                                <br/>
+                                <h5>Project#1: Blackboard Website Data Scraping-:</h5>
+                                <ul>
+                                    <li>Development of Python-Selenium based web scraping software which crawls a website, gathers data, cleans it and generates an excel file for further use.</li>
+                                    <li>Deploying many customized applications as mentioned, depending on department and requirement.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#2: Tutortrac data acquisition/cleaning-:</h5>
+                                <ul>
+                                    <li>Generation of clean data from unstructured raw datafiles generated from the Tutortrac data generation system.</li>
+                                    <li>Deployed Pythonic application to perform the task and result user friendly files and formats.</li>
+                                    <li>Organizing and syncing with University of Cincinnati data warehouse data.</li>
+                                    <li>Reduced human data collection and cleaning time from 2-3 hours into seconds.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#3: Sentiment Analysis of Surveys-:</h5>
+                                <ul>
+                                    <li>Establishing Python applications to glean review scores,mood and similarity from textual survey data.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#4: Analysis and Prediction of GPA, GRE, SAT scores based on involvement with LAC services-:</h5>
+                                <ul>
+                                    <li>Running regression models based on session parameters to find correlation between performance and student involvement with the departmental services.</li>
+                                    <li>Comaparative performance analysis amongst various services offered.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#5: Gleaning utilization, staffing and budget insights through data analysis-:</h5>
+                                <ul>
+                                    <li>Analyzing data to estimate staffing productivity at different departments and times of the day and hence the budget allotment.</li>
+                                    <li>Using Tableau to generate compelling dashboards to analyze the performance of system of events.</li>
+                                    <li>Generating dashboards to perform historical comparison and challenge the status quo.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#6: Analysis by statistical scores and tests on student performance data-:</h5>
+                                <ul>
+                                    <li>Developed a standard data acquisition and cleaning system using R statistical software.</li>
+                                    <li>Performed statistical tests and compaisons on the cleaned data.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#7: Staff Tracking Management-:</h5>
+                                <ul>
+                                    <li>Simulated RDBMS tracking and organization of staff data using access and VBA.</li>
+                                    <li>Developed multiple user interfaces well established by complex SQL queries and procedures to update records and send auto mails as per the task.</li>
+                                </ul>
+                                <br/>
+                                <h5>Project#8: Excel Chart Automation-:</h5>
+                                <ul>
+                                    <li>Utlized VBA to create an auto chart generation interface for excel.</li>
+                                    <li>Implemented nested pivot tables and pivot charts to arrive at requisite reults.</li>
+                                    <li>Reduced user input to just copying data within a dynamic table in excel.</li>
+                                </ul>
+                                <br/>
+                                <span style="font-weight:bold;">Skills/Technologies Utilized</span>: Python, SQL, R, Tableau, Web-Development-HTML / CSS / Javascript, MS-Excel, Statistics/ Machine Learning/ Natual Language Processing, REST Web Services.</li>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                    </div>
+                    <div class="col-xs-4">
+                        <h2 style="text-align:center;">SKILLS</h2>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <canvas id="mySkillChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <canvas id="myDoughnutChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <canvas id="myHardSkillChart" width="200" height="200" style="border-style:ridge;border-width:4px;"></canvas>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div id="thick-line">
+                            <p style="padding:3px"></p>
+                        </div>
+                        <h2 style="text-align:center;">EDUCATION</h2>
+                        <br/>
+                        <div class="row" style="border-style:ridge;border-width:3px;margin:5px;border-color:black;">
+                            <div style="width:100%;height:100%">
+                              <img src="modules/uc_logo.jpeg" style="display:block;margin-left:auto;margin-right:auto;" alt="University of Cincinnati Logo" width=100px height=100px></img>
+                            </div>
+                            <div class="col-xs-12">
+                                <h4 style="text-align:justify;">University of Cincinnati</h4>
+                                <h4>Cincinnati, Ohio</h4>
+                                <br/>
+                                <h5>Masters In EE</h5>
+                                <h5>CEAS-Department of EECS</h5>
+                                <h5>GPA 3.83/4</h5>
+                                <br/>
+                                <h4>GRADUATED</h4 >
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="row" style="border-style:ridge;border-width:3px;margin:5px;border-color:black;">
+                          <div style="width:100%;height:100%">
+                            <img src="modules/iiitbh_logo.png" style="display:block;margin-left:auto;margin-right:auto;" alt="IIIT-Bhubaneswar Logo" width=100px height=100px></img>
+                          </div>
+                          <div class="col-xs-12">
+                            <h4 style="text-align:justify;">IIIT-Bhubaneswar</h4>
+                                <h4>Bhubaneswar, Odisha</h4>
+                                <h4>India</h4>
+                            <br/>
+                            <br/>
+                            <h5>Masters In ETC</h5>
+                            <h5>GPA 8.71/10</h5>
+                            <br/>
+                            <h4>GRADUATED</h4 >
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div id="Projects" class="tabcontent">
+                <h3>Click on each project to know more about it.</h3>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project1"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">1. Top Inventory matches at Ebay given search string via the Ebay Api.</span></button>
+                <br/>
+                <div id="Project1" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project aims to perform search string optimization in the search process of Ebay consumer website. Access to the Ebay Api has been legally obtained through public developer keys.</p>
+                  <h4>Objective</h4><p class="project-text"> Given a search string, query the complete ebay database and list the top 100 results which match the context and topics of the passed search string.</p>
+                  <br/>
+                  <p class="project-text">This projects uses standard NLTK python distribution and NLP algorithms to find a consistent measure of similarity and tries to match inventory items along with the search string. It must be noted that the comparison process must be fast and efficient in nature so as to be able to generate a working, deployable system. Once the results are finalized, the list is displayed and that would be the list displayed in the search results when actually implemented.</p>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project2"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">2. Prediction of duplicate questions using the Quora public dataset.</span></button>
+                <br/>
+                <div id="Project2" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project aims to solve Quoras question similarity challenge. The data used is the publicly released data by Quora regarding training and testing material for the challenge.</p>
+                  <h4>Objective</h4><p class="project-text">Given a user attempting to submit a question, check the similarity of that question with already existing questions and suggest if it is a duplicate or not.</p>
+                  <br/>
+                  <p class="project-text">This projects uses standard NLTK python distribution and NLP algorithms to find a consistent measure of similarity and tries to match the current question along with the existing questions. A match threshold can be implemented and if there is a similarity beyond that, then it can be deemed as duplicate.</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Quora_Compare" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project3"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">3. Sentiment Analysis of survey data based on surveys generated at LAC.</span></button>
+                <br/>
+                <div id="Project3" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project aims to predict scores and mood of students who are the main sources of surveys. It is a way to understand the non verbal aspects gleaned by students within the tutoring atmosphere.</p>
+                  <h4>Objective</h4><p class="project-text">Given a lot of surveys, estimate the mood of the tutoring session. Alo, estimate the missing scores in the survey.</p>
+                  <br/>
+                  <p class="project-text">LAC is a tutoring service provided to bachelors students at the University of Cincinnati. There are 5 major departments and each deal with a unique tutoring atmosphere. Each student who undergoes these kind of sessions are generally required to submit surveys regarding their experiences. These surveys help the decision makers know the performance of a session and its tutor. This project aims to automate the process of estimating the mood.
+                    Different kinds of survey text and words are aggregated into dictionaries representing level of mood and performance expected from a session. Then NLP is used to remove noisy parts within a prospective survey and make a similarity/context match with a pre-existing expected level. Also, in case a score is missing, the mood is utilized to populate the score.</p>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project4"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">4. Analysis on the prospects of short term rental business in New York.</span></button>
+                <br/>
+                <div id="Project4" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a concrete example of a full life cycle data science project. Data is collected, cleaned, analyzed and conclusions are made with a well developed website kind of visualization.</p>
+                  <h4>Objective</h4><p class="project-text">Given Airbnb rental data and Zillow housing data, estimate the best zipcodes in New York city to invest so as to have best results.</p>
+                  <br/>
+                  <p class="project-text">A zipcode which provides a decent amount of revenue, backed by a good house market value and the prospect of higher business opportunity is supposed to be a good candidate and should be in the chosen list of zipcodes to invest. Thus, such individual aspects need to be analyzed leading to a conclusion regarding the final candidate list of zipcodes. There are several factors such as Revenue Analysis, Return on Investment, Market Concentration, Real estate market values and tourism prospects etc. which are analyzed before arriving at a sane conclusion.</p>
+                  <br/>
+                  <p>Check out the code and download the documentation module to see the results for yourself !!</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Short_Term_Rental_Business-New_York" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project5"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">5. Home Loan Market analysis in eastern states of USA.</span></button>
+                <br/>
+                <div id="Project5" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a concrete example of a full life cycle data science project. Data is collected, cleaned, analyzed and conclusions are made with different kind of insightful visualizations.</p>
+                  <h4>Objective</h4><p class="project-text">Given House loan market data, analyze the eastern states of USA and find which state is better for a new entrant and according to what conditions.</p>
+                  <br/>
+                  <p class="project-text">There are several critical factors like population, rate of interest, future forecast etc. to consider before entering the business which are covered to support the analysis. All such parameters have been analysed and the visuals for the same can be generated using the code in the github link.</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Home_Loan_East-USA_Analysis" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project6"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">6. An analysis of Etiquettes and Expectations of people using flight survey data.</span></button>
+                <br/>
+                <div id="Project6" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a concrete example of a full life cycle data visualization project. Data is collected, cleaned, analyzed and conclusions are made with different kind of insightful visualizations.</p>
+                  <h4>Objective</h4><p class="project-text">Given, Flying-Etiquette survey data, perform visualizations from various aspects and angles to bring out concrete insights.</p>
+                  <br/>
+                  <p class="project-text">There are various fields which provide information about the view of people using flight as the medium of transport. Although each field itself provides a good insight on its own, two or more fields can be compared amongst each other to generate more comparative insights. The same has been done in this project and many interesting visualizations have been crafted out. The whole presentation has been arranged in the form of a website and it is present inside the repository link below. Instructions to access the same are present in the Readme file.</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Flying_Etiquette_Survey_Analysis" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project7"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">7. Forex Forecasting using machine learning wavelet neural network models.</span></button>
+                <br/>
+                <div id="Project7" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a full life cycle data science work. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations.</p>
+                  <h4>Objective</h4>Given Forex(Foreign Exchange) i.e. currency time series data from three major developing countries, predict the flow/changes of currency exchange values.</p>
+                  <br/>
+                  <p class="project-text">This project shows how the performance of the basic Local Linear Wavelet Neural Network model (LLWNN) can be improved with hybridizing it with a fuzzy model. The new improved LLWNN based Neurofuzzy hybrid model is used to predict two currency exchange rates i. e. the U. S. Dollar to the Indian Rupee and the U. S. Dollar to the Japanese Yen. The forecasting of foreign exchange rates is done on different time horizons for 1 day, 1 week and 1 month ahead. The LLWNN and Neurofuzzy hybrid models are trained with the backpropagation training algorithm. The two performance measurers i. e. the Root Mean Square Error (RMSE) and the Mean Absolute Percentage Error (MAPE) show the superiority of the Neurofuzzy hybrid model over the LLWNN model.</p>
+                  <a href="https://github.com/Anirudh-Munnangi/Forex-Forecasting--A-basic-example-using-neural-networks" target="_blank">Github_Link</a>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project8"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">8. Stock Market Volatility analysis merged with swarm optimization algorithms.</span></button>
+                <br/>
+                <div id="Project8" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a full life cycle data science work. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations.</p>
+                  <h4>Objective</h4><p class="project-text">Given stock market data from major stock sources, predict the volatility and changes of the values. Also, optimize the algorithms with swarm inspired methods.</p>
+                  <br/>
+                  <p class="project-text">Swarm networks are a new class of neural networks which are inspired by swarm intelligence. Swarm intelligence is the property of co-ordinated behaviour seen amongst the social organisms. The simple local interaction of the swarm members results in complex and intelligent global behaviour. This phenomenon is adapted in swarm intelligence so as to solve many problems.This paper presents a comparative study of particle swarm optimization (PSO) based hybrid swarmnet and simple FLANN model. Here both the models are initially trained with LMS algorithm, then with PSO algorithm. The models are forecasting the stock indices of two different datasets i.e. NIFTY and NASDAQ on different time horizons i.e. one day, one week, and one month ahead. The performance is evaluated on the basis of Root Mean Square Error (RMSE) and Mean Absolute Percentage Error (MAPE). It was verified that PSO based hybrid swarmnet performed better in comparison to PSO based FLANN model, simple hybrid model trained with LMS and simple FLANN model trained with LMS.</p>
+                </div>
+                <br/>
+                <br/>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#Project9"><span style="font-weight:bold;font-size:20px;color:#3D3C3A;">9. Machine learning based neural network models to perform skin cancer segmentation.</span></button>
+                <br/>
+                <div id="Project9" class="collapse" style="border-width:5px;border-style:ridge;margin-right:5%;">
+                  <img src="modules/arrow.jpg" alt="arrow image" width=35px height=35px></img>
+                  <p class="project-text">This project is a full life cycle data science work. It is the topic of my Masters Thesis Research. Data is collected, cleaned, modelled and researched, simulated with optimizations and finally followed by insightful visualizations. Two innovative algorithms are research and modelled into achieving the segmentation operations.</p>
+                  <h4>Objective</h4><p class="project-test">Research innovative algorithms to perform the image segmentation operation in the process of skin cancer detection.</p>
+                  <br/>
+                  <p class="project-text">The purpose of this project is to research innovative segmentation algorithms that will be the part of skin cancer detection process. As a part of the thesis, two application specific modeled algorithms have been designed to perform the process of segmentation, which is the second step in the overall process of classification of the image into various cancerous categories. A novel attempt to use a clustering based algorithm to address a segmentation task has been attempted and achieved through this research. Images have been considered in the gray scale mode and an attempt has been made to extract maximum results without color information. Both algorithms developed involve training and testing phases. Also, they are inspired by the power of Neural Networks. Once the segmentation is done, various performance metrics have been calculated and reported along with visual aid regarding how well the segmentation occurred. The performance has also been compared with the commonly used methods in image segmentation and the advantages as well as performance factors are well critiqued and documented to provide a holistic view related to the usage of such algorithms in the concerned topic of skin cancer segmentation. Experimental testing has also been done with images having pre-known ground truth information and the resulting segmented portions as well as quality has been shown.</p>
+                </div>
+                <br/>
+                <br/>
+            </div>
+            <div id="Publications" class="tabcontent">
+              <div id="publication-name" class=container>
+                <h3>1. Melanoma Image Segmentation using Self-Organized Feature Maps- BIOENG'16</h3>
+                <a href="http://worldcomp-proceedings.com/proc/p2016/BIE6118.pdf" target="_blank"><span style="font-size:20px;">Publication Link</span></a>
+              </div>
+              <br/>
+              <div id="publication-name" class=container>
+                <h3>2. Forex Forecasting: A comparative study of LLWNN & Neuro-fuzzy Hybrid Model, IJCA</h3>
+                <a href="http://www.ijcaonline.org/archives/volume66/number18/11188-6451" target="_blank"><span style="font-size:20px;">Publication Link</span></a>
+              </div>
+              <br/>
+              <div id="publication-name" class=container>
+                <h3>3. Stock Volatility forecasting using Swarm Optimized Hybrid Network, IJETTCS</h3>
+                <a href="http://www.ijettcs.org/Volume2Issue3/IJETTCS-2013-05-28-063.pdf" target="_blank"><span style="font-size:20px;">Publication Link</span></a>
+              </div>
+              <br/>
+              <div id="publication-name" class=container>
+                <h3>4. Innovative Segmentation Strategies for Melanoma Skin Cancer Detection.</h3>
+                <a href="https://etd.ohiolink.edu/!etd.send_file?accession=ucin1510916097483278&disposition=inline" target="_blank"><span style="font-size:20px;">Publication Link</span></a>
+              </div>
+              <br/>
+              <div id="publication-name" class=container>
+                <h3>5. Channel Equalization using Robust Adaptive Algorithm- Bachelors Thesis.</h3>
+                <a href="https://drive.google.com/open?id=0B7HcoXAdWu5fYmJJNmtDQ0c2Z3c" target="_blank"><span style="font-size:20px;">Publication Link</span></a>
+              </div>
+              <br/>
+              <br/>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6">
+          <br/>
+          <br/>
+          <div id="footer-left">
+          <a class="btn btn-github" href="https://github.com/Anirudh-Munnangi" target="_blank"><i class="fa fa-github"></i></a>
+          <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/animun/" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/manirudh" target="_blank"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6">
+          <br/>
+          <br/>
+          <div id="footer-right">
+          <i class="fa fa-phone" style="color:red;"></i><span style="color:white;">: (513) 652-4587</span><br>
+          <br/>
+          <i class="fa fa-envelope" style="color:green;"></i>:<a href="mailto:munnangianirudh@gmail.com"><span style="color:white;text-decoration:underline;">munnangianirudh@gmail.com</span></a>
+        </div>
+        </div>
+    </div>
+        <p style="padding:30px"></p>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-5">
+        <h6 style="color:white;">© Copyright 2017 Anirudh Munnangi</h6>
+      </div>
+    </div>
+    </div>
+    <script>
+        // Script to plot the bar of chart of Data Science Skills using chart js
+        Chart.defaults.global.animation.duration = 5000;
+        Chart.defaults.global.animation.animationSteps = 100;
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Data Collection", "Data Quality Analysis", "Data Modelling", "Development", "Visualization / Front-End"],
+                datasets: [{
+                    data: [30, 10, 25, 20, 15],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Percentage Share Of My Work',
+                    fontSize: 18
+                },
+                legend: {
+                    display: false
+                }
+
+            }
+        });
+    </script>
+    <script>
+        // Script to plot the bar of chart of Data Science Skills using chart js
+        Chart.defaults.global.animation.duration = 5000;
+        Chart.defaults.global.animation.animationSteps = 100;
+        Chart.scaleService.updateScaleDefaults('linear',
+        {
+          ticks:
+            {
+                min: 0,
+                max:10
+            }
+        });
+        var ctx = document.getElementById("mySkillChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ["Python", "R", "SQL", "Tableau", "Web-Development","Git","C++","MS-Office"],
+                datasets: [{
+                    data: [9, 7, 7, 6, 6, 8, 5.5, 7],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(67, 198, 219, 0.7)',
+                        'rgba(251, 185, 23, 0.7)',
+                        'rgba(255, 0, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(67, 198, 219, 1)',
+                        'rgba(251, 185, 23, 1)',
+                        'rgba(255, 0, 255, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Coding/Software Skills out of 10',
+                    fontSize: 14
+                },
+                legend: {
+                    display: false
+                },
+                scales:
+                {
+                  xAxes: [{
+                              gridLines:
+                              {
+                                  display:false
+                              }
+                          }],
+                  yAxes: [{
+                              gridLines:
+                              {
+                                  display:false
+                              }
+                          }]
+                }
+            }
+        });
+    </script>
+    <script>
+        // Script to plot the bar of chart of Data Science Skills using chart js
+        var ctx = document.getElementById("myDoughnutChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Analysis","Full Life Cycle Development","Research"],
+                datasets: [{
+                    data: [0.4, 0.45, 0.15],
+                    backgroundColor: [
+                        'rgba(0, 187, 201, 0.7)',
+                        'rgba(89, 232, 23, 0.7)',
+                        'rgba(255, 0, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(0, 187, 201, 1)',
+                        'rgba(89, 232, 23, 1)',
+                        'rgba(255, 0, 255, 1)'
+                    ],
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Distribution of Time Spent',
+                    fontSize: 14
+                },
+                legend: {
+                    display: true
+                },
+                animation:
+                {
+                  aninmationScale:true,
+                  animationRotate:true
+                }
+            }
+        });
+    </script>
+    <script>
+        // Script to plot the bar of chart of Data Science Skills using chart js
+        Chart.defaults.global.animation.duration = 5000;
+        Chart.defaults.global.animation.animationSteps = 100;
+        Chart.scaleService.updateScaleDefaults('linear',
+        {
+          ticks:
+            {
+                min: 0,
+                max:10
+            }
+        });
+        var ctx = document.getElementById("myHardSkillChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ["Machine Learning", "Statistics", "Python-TechStack", "Big Data- Spark", "NLP", "Simulations/Tests","Optimization"],
+                datasets: [{
+                    data: [8, 7, 8, 5.5, 5, 7, 7],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(89, 232, 23, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(67, 198, 219, 0.7)',
+                        'rgba(255, 0, 255, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(89, 232, 23, 0.7)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(67, 198, 219, 1)',
+                        'rgba(255, 0, 255, 1)'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Technical Skills out of 10',
+                    fontSize: 14
+                },
+                legend: {
+                    display: false
+                },
+                scales:
+                {
+                  xAxes: [{
+                              gridLines:
+                              {
+                                  display:false
+                              }
+                          }],
+                  yAxes: [{
+                              gridLines:
+                              {
+                                  display:false
+                              }
+                          }]
+                }
+            }
+        });
+    </script>
+
 </body>
+
 </html>
